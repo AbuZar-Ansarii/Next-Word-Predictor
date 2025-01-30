@@ -4,7 +4,7 @@ import time
 import numpy as np
 
 # Load the model and other necessary objects
-model = pickle.load(open("next_word.pkl", "rb"))
+model = pickle.load(open("next_word_predictor.pkl", "rb"))
 pad_sequences_function = pickle.load(open("pad_sequence.pkl", "rb"))  # Renamed variable to clarify it's a function
 tokenizer = pickle.load(open("tokenizer.pkl", "rb"))
 
@@ -37,4 +37,4 @@ if st.button("Click"):
             break
 
     if predicted_words:
-        st.sidebar.write("Predicted words: " , "  ".join(predicted_words))
+        st.header(input_text)
